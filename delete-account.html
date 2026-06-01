@@ -1,69 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GoalStake Social - Delete Account</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Account - GoalStake Social</title>
+
 <style>
 body {
     font-family: Arial, sans-serif;
-    max-width: 800px;
+    background: #f4f6f8;
+    margin: 0;
+    color: #111827;
+}
+
+.container {
+    max-width: 900px;
     margin: 40px auto;
     padding: 20px;
 }
-h1 {
-    color: #c62828;
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 3px solid #00b96b;
+    padding-bottom: 20px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 14px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+.tagline {
+    color: #00b96b;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    margin-top: 28px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #00b96b;
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 24px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.email {
+    font-weight: bold;
+    color: #00b96b;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 18px;
+    background: #00b96b;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    color: #666;
+    margin-top: 36px;
+    font-size: 14px;
 }
 </style>
 </head>
+
 <body>
 
-<h1>Delete Your GoalStake Social Account</h1>
+<div class="container">
 
-<p>
-Users may request deletion of their GoalStake Social account at any time.
-</p>
+    <div class="header">
+        <img src="app_icon.png" alt="GoalStake Social Logo" class="logo">
+        <div>
+            <h1>GoalStake Social</h1>
+            <div class="tagline">PREDICT. COMPETE. CLIMB.</div>
+        </div>
+    </div>
 
-<h2>How to Request Deletion</h2>
+    <div class="card">
+        <h2>Delete Your Account</h2>
 
-<p>
-Send an email to:
-</p>
+        <p>
+            Users may request deletion of their GoalStake Social account and associated data at any time.
+        </p>
 
-<p>
-<strong>support@goalstake.net</strong>
-</p>
+        <h3>How to Request Deletion</h3>
 
-<p>
-Use the subject line:
-</p>
+        <p>
+            Send an email to:
+            <span class="email">support@goalstake.net</span>
+        </p>
 
-<p>
-<strong>Delete My GoalStake Social Account</strong>
-</p>
+        <p>
+            Use the subject line:
+            <strong>Delete My GoalStake Social Account</strong>
+        </p>
 
-<h2>Data Deleted</h2>
+        <h3>Data Deleted</h3>
 
-<ul>
-<li>User account information</li>
-<li>Username</li>
-<li>Email address</li>
-<li>Predictions</li>
-<li>League memberships</li>
-<li>Leaderboard participation records</li>
-</ul>
+        <ul>
+            <li>User account information</li>
+            <li>Username</li>
+            <li>Email address</li>
+            <li>Predictions</li>
+            <li>League memberships</li>
+            <li>Leaderboard participation records</li>
+        </ul>
 
-<h2>Data Retention</h2>
+        <h3>Data Retention</h3>
 
-<p>
-Deletion requests are processed within 30 days.
-Backup records may be retained for legal, security, and fraud-prevention purposes for up to 90 days.
-</p>
+        <p>
+            Deletion requests are processed within 30 days. Backup records may be retained for legal,
+            security, and fraud-prevention purposes for up to 90 days.
+        </p>
 
-<h2>Contact</h2>
+        <h3>Contact</h3>
 
-<p>
-support@goalstake.net
-</p>
+        <p>
+            Email: <span class="email">support@goalstake.net</span>
+        </p>
+
+        <a href="index.html" class="button">Back to Support Page</a>
+    </div>
+
+    <div class="footer">
+        © 2026 GoalStake Social. All Rights Reserved.
+    </div>
+
+</div>
 
 </body>
 </html>
