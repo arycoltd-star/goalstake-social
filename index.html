@@ -1,70 +1,134 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-    <title>GoalStake Social Support</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GoalStake Social Support</title>
 
 ```
 <style>
+    :root {
+        --bg: #f4f6f8;
+        --card: #ffffff;
+        --text: #16202a;
+        --muted: #5f6b76;
+        --brand: #17b26a;
+        --brand-dark: #129357;
+        --border: rgba(23, 178, 106, 0.18);
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
+        margin: 0;
         font-family: Arial, sans-serif;
-        max-width: 900px;
-        margin: auto;
-        padding: 40px;
-        background-color: #f8f9fa;
-        color: #222;
+        background: var(--bg);
+        color: var(--text);
+    }
+
+    .page {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px 24px 48px;
     }
 
     .header {
         display: flex;
         align-items: center;
         gap: 20px;
-        border-bottom: 3px solid #17b26a;
-        padding-bottom: 20px;
-        margin-bottom: 30px;
+        padding-bottom: 24px;
+        margin-bottom: 28px;
+        border-bottom: 3px solid var(--brand);
     }
 
     .header img {
-        width: 100px;
-        height: 100px;
+        width: 96px;
+        height: 96px;
+        object-fit: contain;
+        border-radius: 20px;
+        display: block;
+    }
+
+    .header-text h1 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1.1;
     }
 
     .tagline {
-        color: #17b26a;
-        font-weight: bold;
-        margin-top: 5px;
+        margin-top: 8px;
+        color: var(--brand);
+        font-weight: 700;
+        letter-spacing: 0.4px;
     }
 
     .download-section {
-        margin: 20px 0 30px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 8px 0 32px;
+    }
+
+    .download-button {
+        display: block;
+        width: 100%;
+        max-width: 360px;
         text-align: center;
+        background: var(--brand);
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 15px 24px;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .download-button:hover {
+        background: var(--brand-dark);
+        transform: translateY(-1px);
+        text-decoration: none;
     }
 
     .download-note {
-        margin-top: 14px;
-        color: #666;
+        margin-top: 6px;
+        color: var(--muted);
         font-size: 15px;
+        text-align: center;
     }
 
     .card {
-        background: white;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        margin-bottom: 25px;
+        background: var(--card);
+        padding: 28px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+        margin-bottom: 24px;
     }
 
-    h1 {
-        margin: 0;
+    .card h2 {
+        margin: 0 0 16px;
+        color: var(--brand);
+        font-size: 22px;
     }
 
-    h2 {
-        color: #17b26a;
+    .card p {
+        margin: 0 0 16px;
+        line-height: 1.6;
+    }
+
+    .card p:last-child {
+        margin-bottom: 0;
     }
 
     a {
-        color: #17b26a;
+        color: var(--brand);
         text-decoration: none;
     }
 
@@ -72,145 +136,124 @@
         text-decoration: underline;
     }
 
-    .footer {
-        margin-top: 40px;
-        font-size: 14px;
-        color: #666;
-        text-align: center;
-    }
-
     .button {
         display: inline-block;
-        background-color: #17b26a;
-        color: white;
+        background: var(--brand);
+        color: #ffffff;
         padding: 12px 20px;
-        border-radius: 6px;
+        border-radius: 8px;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: 700;
     }
 
     .button:hover {
-        background-color: #129357;
+        background: var(--brand-dark);
         text-decoration: none;
     }
 
-    .download-button {
-        display: block;
-        width: fit-content;
-        min-width: 280px;
-        margin: 0 auto 12px auto;
-        background-color: #17b26a;
-        color: white;
-        padding: 14px 26px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 18px;
+    .footer {
+        margin-top: 40px;
         text-align: center;
+        font-size: 14px;
+        color: var(--muted);
     }
 
-    .download-button:hover {
-        background-color: #129357;
-        text-decoration: none;
+    @media (max-width: 640px) {
+        .page {
+            padding: 28px 16px 40px;
+        }
+
+        .header {
+            align-items: flex-start;
+        }
+
+        .header img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .header-text h1 {
+            font-size: 26px;
+        }
+
+        .download-button {
+            font-size: 17px;
+        }
+
+        .card {
+            padding: 22px;
+        }
     }
 </style>
 ```
 
 </head>
-
 <body>
-
-<div class="header">
-    <img src="app_icon.png" alt="GoalStake Social Logo">
+    <div class="page">
+        <div class="header">
+            <img src="app_icon.png" alt="GoalStake Social Logo">
+            <div class="header-text">
+                <h1>GoalStake Social</h1>
+                <div class="tagline">PREDICT. COMPETE. CLIMB.</div>
+            </div>
+        </div>
 
 ```
-<div>
-    <h1>GoalStake Social</h1>
-    <div class="tagline">
-        PREDICT. COMPETE. CLIMB.
+    <div class="download-section">
+        <a class="download-button" href="https://apps.apple.com/app/id6773332984" target="_blank" rel="noopener noreferrer">
+            Download on the App Store
+        </a>
+
+        <a class="download-button" href="https://play.google.com/store/apps/details?id=com.goalstake.social" target="_blank" rel="noopener noreferrer">
+            Get it on Google Play
+        </a>
+
+        <a class="download-button" href="https://lhomrzddlgk15klyegrc.share.dreamflow.app/" target="_blank" rel="noopener noreferrer">
+            Open Web App
+        </a>
+
+        <div class="download-note">
+            Available now on iPhone, Android, and Web.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Support</h2>
+        <p>
+            For technical assistance, bug reports, account enquiries, or feedback,
+            please contact our support team.
+        </p>
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:support@goalstake.net">support@goalstake.net</a>
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>About GoalStake Social</h2>
+        <p>
+            GoalStake Social is a free-to-play football prediction platform where users can
+            predict match outcomes, compete with friends, join leagues, and climb global leaderboards.
+        </p>
+        <p>
+            The platform is designed for entertainment and friendly competition. GoalStake Social
+            does not facilitate gambling, wagering, cash prizes, or real-money contests.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Privacy Policy</h2>
+        <p>
+            Learn how we collect, use, and protect your information.
+        </p>
+        <a class="button" href="privacy.html">View Privacy Policy</a>
+    </div>
+
+    <div class="footer">
+        © 2026 GoalStake Social. All Rights Reserved.
     </div>
 </div>
 ```
-
-</div>
-
-<div class="download-section">
-    <a class="download-button" href="https://apps.apple.com/app/id6773332984" target="_blank" rel="noopener noreferrer">
-        Download on the App Store
-    </a>
-
-```
-<a class="download-button" href="https://play.google.com/store/apps/details?id=com.goalstake.social" target="_blank" rel="noopener noreferrer">
-    Get it on Google Play
-</a>
-
-<a class="download-button" href="https://lhomrzddlgk15klyegrc.share.dreamflow.app/" target="_blank" rel="noopener noreferrer">
-    Open Web App
-</a>
-
-<div class="download-note">
-    Available now on iPhone, Android, and Web.
-</div>
-```
-
-</div>
-
-<div class="card">
-    <h2>Support</h2>
-
-```
-<p>
-    For technical assistance, bug reports, account enquiries, or feedback,
-    please contact our support team.
-</p>
-
-<p>
-    <strong>Email:</strong>
-    <a href="mailto:support@goalstake.net">
-        support@goalstake.net
-    </a>
-</p>
-```
-
-</div>
-
-<div class="card">
-    <h2>About GoalStake Social</h2>
-
-```
-<p>
-    GoalStake Social is a free-to-play football prediction platform where
-    users can predict match outcomes, compete with friends, join leagues,
-    and climb global leaderboards.
-</p>
-
-<p>
-    The platform is designed for entertainment and friendly competition.
-    GoalStake Social does not facilitate gambling, wagering, cash prizes,
-    or real-money contests.
-</p>
-```
-
-</div>
-
-<div class="card">
-    <h2>Privacy Policy</h2>
-
-```
-<p>
-    Learn how we collect, use, and protect your information.
-</p>
-
-<a class="button" href="privacy.html">
-    View Privacy Policy
-</a>
-```
-
-</div>
-
-<div class="footer">
-    © 2026 GoalStake Social. All Rights Reserved.
-</div>
 
 </body>
 </html>
